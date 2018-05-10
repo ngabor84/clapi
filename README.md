@@ -4,21 +4,13 @@ Simple cli tool for API testing
 
 ## Installation
 ```shell
-# clone the git repository
-git clone https://github.com/ngabor84/clapi.git clapi
+# download the phar file and the public key
+wget https://github.com/ngabor84/clapi/releases/download/0.1.0/clapi.phar
+wget https://github.com/ngabor84/clapi/releases/download/0.1.0/clapi.phar.pubkey
 
-# enter to the directory where you cloned the repo
-cd clapi
-
-# install the dependecies with composer
-composer install
-
-# build the php archive
-make build
-
-# copy the phar into usr/local/bin
-cp bin/clapi.phar /usr/local/bin/clapi
-cp bin/clapi.phar.pubkey /usr/local/bin/clapi.pubkey
+# move the downloaded files into usr/local/bin
+sudo mv clapi.phar /usr/local/bin/clapi
+sudo mv clapi.phar.pubkey /usr/local/bin/clapi.pubkey
 
 # add execution permission
 sudo chmod a+x /usr/local/bin/clapi
