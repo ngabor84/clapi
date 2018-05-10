@@ -1,5 +1,5 @@
 .idea
 vendor
 bin/clapi.phar
-bin/clapi.phar.pubkey
+bin/clapi.phar.asc
 credentials

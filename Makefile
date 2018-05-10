@@ -16,6 +16,4 @@ test: ## Run unit tests
 
 build: ## Build the phar file from source code
 	./vendor/bin/box build && chmod u+x bin/clapi.phar
-
-publish: ## Publish the phar file to Phive
-	echo 'publish'
+	gpg -u negabor@gmail.com --detach-sign --output ./bin/clapi.phar.asc ./bin/clapi.phar

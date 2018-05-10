@@ -6,14 +6,17 @@ Simple cli tool for API testing
 ```shell
 # download the phar file and the public key
 wget https://github.com/ngabor84/clapi/releases/download/0.1.0/clapi.phar
-wget https://github.com/ngabor84/clapi/releases/download/0.1.0/clapi.phar.pubkey
+wget https://github.com/ngabor84/clapi/releases/download/0.1.0/clapi.phar.asc
+
+# verify the phar with gpg
+gpg --keyserver pgp.mit.edu --recv-keys 0xcd54be34da0a1a97
+gpg --verify clapi.phar.asc clapi.phar
+
+# add execution permission
+sudo chmod +x clapi.phar
 
 # move the downloaded files into usr/local/bin
 sudo mv clapi.phar /usr/local/bin/clapi
-sudo mv clapi.phar.pubkey /usr/local/bin/clapi.pubkey
-
-# add execution permission
-sudo chmod a+x /usr/local/bin/clapi
 ```
 
 ## Usage
