@@ -1,0 +1,17 @@
+{
+    "chmod": "0755",
+    "main": "bin/clapi.php",
+    "output": "bin/clapi.phar",
+    "algorithm": "OPENSSL",
+    "key": "credentials/clapi-phar-private.pem",
+    "files": ["LICENSE.md", "README.md"],
+    "directories": ["src"],
+    "finder": [
+        {
+            "name": "*.php",
+            "exclude": ["test", "tests"],
+            "in": "vendor"
+         }
+    ],
+    "stub": true
+}

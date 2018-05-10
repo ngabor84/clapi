@@ -1,0 +1,5 @@
+.idea
+vendor
+bin/clapi.phar
+bin/clapi.phar.pubkey
+credentials
