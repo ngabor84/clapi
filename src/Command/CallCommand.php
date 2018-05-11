@@ -5,6 +5,7 @@ namespace Clapi\Command;
 use Clapi\ApiCall\ApiCall;
 use Clapi\ApiCall\ApiCallClientBuilder;
 use Clapi\ApiCall\ApiCallOptionParser;
+use Clapi\OutputFormatter\JsonOutputFormatter;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
@@ -36,6 +37,7 @@ class CallCommand extends Command
 
         $response = $call->execute($options);
 
-        $output->writeln('Response: ' . $response->getBody()->getContents());
+        $output->setFormatter(new JsonOutputFormatter());
+        $output->writeln($response->getBody()->getContents());
     }
 }
