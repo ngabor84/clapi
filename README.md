@@ -1,8 +1,15 @@
+[ ![Codeship Status for ngabor84/clapi](https://app.codeship.com/projects/af733ad0-39b4-0136-f9e6-528c5e546e82/status?branch=master)](https://app.codeship.com/projects/289973)
+
 # Clapi
 
 Simple cli tool for API testing
 
 ## Installation
+### with [phive](https://github.com/phar-io/phive)
+```shell
+phive install clapi
+```
+### manually
 ```shell
 # download the phar file and the public key
 wget https://github.com/ngabor84/clapi/releases/download/0.1.0/clapi.phar
