@@ -68,6 +68,9 @@ class ApiCallClientBuilder
     {
         $credential = new \Guzzle\Http\Middleware\EscherCredential($credential->getKey(), $credential->getSecret(), $credential->getScope());
         $escherMiddleware = new EscherMiddleware($credential);
+        $escherMiddleware->setAuthHeaderKey('X-EMS-AUTH');
+        $escherMiddleware->setDateHeaderKey('X-EMS-DATE');
+        $escherMiddleware->setAlgoPrefix('EMS');
 
         $this->clientConfig['auth'] = 'escher';
         $this->clientConfig['handler']->unshift($escherMiddleware);

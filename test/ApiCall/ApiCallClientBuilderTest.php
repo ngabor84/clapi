@@ -71,10 +71,10 @@ class ApiCallClientBuilderTest extends TestCase
         $client->post('http://test.it', ['auth' => 'escher']);
 
         $request = $this->getRequestFromClientHistory();
-        $this->assertTrue($request->hasHeader('x-escher-auth'));
-        $this->assertTrue($request->hasHeader('x-escher-date'));
-        $authHeader = $request->getHeader('x-escher-auth')[0];
-        $expectedHeaderPart = sprintf('ESR-HMAC-SHA256 Credential=test_key/%s/some/test/scope', date('Ymd'));
+        $this->assertTrue($request->hasHeader('x-ems-auth'));
+        $this->assertTrue($request->hasHeader('x-ems-date'));
+        $authHeader = $request->getHeader('x-ems-auth')[0];
+        $expectedHeaderPart = sprintf('EMS-HMAC-SHA256 Credential=test_key/%s/some/test/scope', date('Ymd'));
         $this->assertContains($expectedHeaderPart, $authHeader);
     }
 
