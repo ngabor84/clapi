@@ -304,16 +304,16 @@
         },
         {
             "name": "ngabor84/guzzle-wsse-middleware",
-            "version": "0.1.1",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ngabor84/guzzle-wsse-middleware.git",
-                "reference": "076d5af582f4e7a0dfa0ffb929cdd81c3845e79e"
+                "reference": "45e0eafa1d26b72a765028583b87df5e0a018e5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ngabor84/guzzle-wsse-middleware/zipball/076d5af582f4e7a0dfa0ffb929cdd81c3845e79e",
-                "reference": "076d5af582f4e7a0dfa0ffb929cdd81c3845e79e",
+                "url": "https://api.github.com/repos/ngabor84/guzzle-wsse-middleware/zipball/45e0eafa1d26b72a765028583b87df5e0a018e5e",
+                "reference": "45e0eafa1d26b72a765028583b87df5e0a018e5e",
                 "shasum": ""
             },
             "require": {
@@ -349,7 +349,7 @@
                 "middleware",
                 "wsse"
             ],
-            "time": "2018-06-06T07:08:35+00:00"
+            "time": "2018-06-06T15:24:29+00:00"
         },
         {
             "name": "psr/http-message",
