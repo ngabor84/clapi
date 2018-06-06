@@ -5,8 +5,8 @@ namespace Clapi\ApiCall;
 use Clapi\Authentication\Authentication;
 use Clapi\Authentication\Credential;
 use Clapi\Authentication\EscherCredential;
-use EightPoints\Guzzle\WsseAuthMiddleware;
 use Guzzle\Http\Middleware\EscherMiddleware;
+use Guzzle\Http\Middleware\WsseMiddleware;
 use GuzzleHttp\Client;
 use GuzzleHttp\HandlerStack;
 
@@ -78,8 +78,9 @@ class ApiCallClientBuilder
 
     private function setWsseAuthentication(Credential $credential): void
     {
-        $wsseMiddleware = new WsseAuthMiddleware($credential->getKey(), $credential->getSecret());
+        $wsseMiddleware = new WsseMiddleware($credential->getKey(), $credential->getSecret());
 
-        $this->clientConfig['handler']->unshift($wsseMiddleware->attach());
+        $this->clientConfig['auth'] = 'wsse';
+        $this->clientConfig['handler']->unshift($wsseMiddleware);
     }
 }

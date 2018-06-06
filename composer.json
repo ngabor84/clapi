@@ -15,8 +15,8 @@
         "php": ">=7.1",
         "psr/http-message": "1.0.1",
         "guzzlehttp/guzzle": ">=6.3",
-        "eightpoints/guzzle-wsse-middleware": "^4.1.1",
-        "ngabor84/guzzle-escher-middleware": "^0.1.0",
+        "ngabor84/guzzle-wsse-middleware": ">=0.1.1",
+        "ngabor84/guzzle-escher-middleware": ">=0.1.0",
         "symfony/console": "~3.1"
     },
     "require-dev": {
