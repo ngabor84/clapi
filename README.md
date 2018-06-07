@@ -40,6 +40,9 @@ available options:
 -s --scope    Set the scope for escher authentication
 -H --header   Add custom header to request
 
-example:
-clapi call -a basic -u TestUser -p TestPass123 -X POST -d '{"key": "value"}' -H "X-Custom-Header: Test" http://example.api/tests 
+examples:
+clapi call -X PATCH -d '{"email": "new@email.com"}' https://your-api.com/endpoint/id
+clapi call -a basic -u TestUser -p TestPass123 -X DELETE -H "X-Custom-Header: Test" https://your-api.com/endpoint/id
+clapi call -a escher -u escher_key -p escher_secret -s credential_scope -X POST -d '{"id": "3", "name": "John Doe", "email": "john@doe.com"}' https://your-api.com/endpoint
+clapi call -a wsse -u wsse_key -p wsse_secret https://your-api.com/endpoint
 ```
